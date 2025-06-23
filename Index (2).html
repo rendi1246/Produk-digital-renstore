@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toko Digital Bro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #222;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #00ffcc;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 6px;
+    }
+
+    nav {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      font-size: 15px;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .produk {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .produk-card {
+      background: #1b1b1b;
+      border: 1px solid #333;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .produk-card h3 {
+      margin: 0 0 8px 0;
+      color: #00ffcc;
+    }
+
+    .produk-card p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .produk-card .harga {
+      font-size: 16px;
+      font-weight: bold;
+      color: #0f0;
+      margin: 10px 0;
+    }
+
+    .produk-card button {
+      padding: 10px 20px;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .produk-card button:hover {
+      background: #00e0b0;
+    }
+
+    .testimoni-wrapper {
+      overflow: hidden;
+      background: #111;
+      padding: 30px 0;
+    }
+
+    .testimoni-wrapper h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .testimoni-slider {
+      display: flex;
+      gap: 30px;
+      animation: scrollTesti 25s linear infinite;
+      padding: 0 20px;
+    }
+
+    .testimoni-item {
+      flex: 0 0 auto;
+      background: #222;
+      padding: 16px;
+      border-radius: 10px;
+      min-width: 280px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    }
+
+    .testimoni-item p {
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .testimoni-item span {
+      color: #0f0;
+      font-weight: bold;
+    }
+
+    @keyframes scrollTesti {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .checkout {
+      background: #181818;
+      padding: 30px 20px;
+    }
+
+    .checkout h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .checkout label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    .checkout input, .checkout select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+      background: #2a2a2a;
+      color: #fff;
+    }
+
+    .checkout .pembayaran {
+      background: #1b1b1b;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .checkout button {
+      width: 100%;
+      padding: 14px;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .checkout button:hover {
+      background: #00ddb3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      color: #777;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔥 Produk Digital Rendi 🔥</h1>
+    <p>Menuju Kebebasan Financial 💸</p>
+  </header>
+
+  <nav>
+    <a href="#">Produk</a>
+    <a href="#">Kontak</a>
+    <a href="#">Info</a>
+  </nav>
+
+  <section class="produk">
+    <div class="produk-card">
+      <h3>Ebook Sukses Jualan</h3>
+      <p>Rahasia jualan digital dari nol.</p>
+      <div class="harga">Rp39.000</div>
+      <button onclick="pilihProduk('Ebook Sukses Jualan')">Beli Sekarang</button>
+    </div>
+    <div class="produk-card">
+      <h3>Template Desain Canva</h3>
+      <p>Buat konten makin profesional.</p>
+      <div class="harga">Rp29.000 <s style="color:#888;">Rp49.000</s></div>
+      <button onclick="pilihProduk('Template Desain Canva')">Beli Sekarang</button>
+    </div>
+    <div class="produk-card">
+      <h3>Psychology of Money</h3>
+      <p>Ebook mindset finansial</p>
+      <div class="harga">Rp25.000</div>
+      <button onclick="pilihProduk('Psychology of Money')">Beli Sekarang</button>
+    </div>
+  </section>
+
+  <section class="testimoni-wrapper">
+    <h2>Apa Kata Mereka 💬</h2>
+    <div class="testimoni-slider">
+      <div class="testimoni-item">
+        <p>"Baru beli seminggu langsung dapet closingan 5! Gokil!"</p>
+        <span>- Aldi, Freelancer</span>
+      </div>
+      <div class="testimoni-item">
+        <p>"Produknya berkualitas, desainnya keren, langsung gua pake buat promosi!"</p>
+        <span>- Nisa, Content Creator</span>
+      </div>
+      <div class="testimoni-item">
+        <p>"Gak nyangka bisa dapet income dari HP doang! 😭🔥"</p>
+        <span>- Rizal, Pelajar</span>
+      </div>
+      <div class="testimoni-item">
+        <p>"Respon admin cepat dan file-nya langsung bisa dipake!"</p>
+        <span>- Maya, IRT Online</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="checkout">
+    <h2>Chat & Pembayaran 📩</h2>
+    <label for="nama">Nama Kamu:</label>
+    <input type="text" id="nama" placeholder="Contoh: Andi" />
+
+    <label for="produk">Pilih Produk:</label>
+    <select id="produk">
+      <option value="Ebook Sukses Jualan">Ebook Sukses Jualan</option>
+      <option value="Template Desain Canva">Template Desain Canva</option>
+      <option value="Psychology of Money">Psychology of Money</option>
+    </select>
+
+    <div class="pembayaran">
+      <strong>Pembayaran via:</strong><br>
+      <ul>
+        <li>💳 Bank Transfer (BCA - 1234567890)</li>
+        <li>📱 E-Wallet (Dana/Ovo:
+        <!-- Kirim Bukti Transfer -->
+<h3 style="margin-top: 30px;">📤 Kirim Bukti Transfer</h3>
+<p>Setelah transfer, klik tombol di bawah ini untuk kirim bukti via WhatsApp:</p>
+<a href="#" onclick="kirimBuktiTransfer()" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 10px; text-decoration: none;">Kirim Bukti Transfer 📸</a>
+
+<script>
+  function kirimBuktiTransfer() {
+    const nama = document.getElementById("nama").value;
+    const produk = document.getElementById("produk").value;
+    const noAdmin = "6283853023012";
+    const pesan = `Halo, saya sudah transfer untuk pembelian *${produk}* atas nama *${nama}*. Mohon dicek ya kak 🙏`;
+    window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`);
+  }
+</script>
