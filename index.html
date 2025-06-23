@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 Produk Digital Rendi 🔥</title>
+  <style>
+    body {
+      background-color: #111827;
+      color: #f3f4f6;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0 20px;
+    }
+    h1, h2, h3 {
+      color: #facc15;
+    }
+    .produk, .testimoni, .form, .pembayaran {
+      margin: 30px 0;
+    }
+    .produk-item {
+      background: #1f2937;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .produk-item button {
+      margin-top: 10px;
+      background-color: #10b981;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .produk-item button:hover {
+      background-color: #059669;
+    }
+    input, select {
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: none;
+    }
+    .testimoni-item {
+      background-color: #1e293b;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease-in-out forwards;
+    }
+    .testimoni-item:nth-child(1) { animation-delay: 0.1s; }
+    .testimoni-item:nth-child(2) { animation-delay: 0.3s; }
+    .testimoni-item:nth-child(3) { animation-delay: 0.5s; }
+    .testimoni-item:nth-child(4) { animation-delay: 0.7s; }@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a.button-wa {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <h1>🔥 Produk Digital Rendi 🔥</h1>
+  <p>Menuju Kebebasan Financial 💸</p>  <div class="produk">
+    <div class="produk-item">
+      <h2>Ebook Sukses Jualan</h2>
+      <p>Rahasia jualan digital dari nol.</p>
+      <p><strong>Rp39.000</strong></p>
+      <button onclick="pilihProduk('Ebook Sukses Jualan', '39.000')">Beli Sekarang</button>
+    </div>
+    <div class="produk-item">
+      <h2>Template Desain Canva</h2>
+      <p>Buat konten makin profesional.</p>
+      <p><strong><del>Rp49.000</del> Rp29.000</strong></p>
+      <button onclick="pilihProduk('Template Desain Canva', '29.000')">Beli Sekarang</button>
+    </div>
+    <div class="produk-item">
+      <h2>Psychology of Money</h2>
+      <p>Ebook mindset finansial</p>
+      <p><strong>Rp25.000</strong></p>
+      <button onclick="pilihProduk('Psychology of Money', '25.000')">Beli Sekarang</button>
+    </div>
+    <div class="produk-item">
+      <h2>Layanan Capcut Premium 30 Hari</h2>
+      <p>Langganan Capcut Premium Resmi</p>
+      <p><strong>Rp12.000</strong></p>
+      <button onclick="pilihProduk('Layanan Capcut Premium 30 Hari', '12.000')">Beli Sekarang</button>
+    </div>
+  </div>  <div class="testimoni">
+    <h3>Apa Kata Mereka 💬</h3>
+    <div class="testimoni-item">"Baru beli seminggu langsung dapet closingan 5! Gokil!"<br>- Aldi, Freelancer</div>
+    <div class="testimoni-item">"Produknya berkualitas, desainnya keren, langsung gua pake buat promosi!"<br>- Nisa, Content Creator</div>
+    <div class="testimoni-item">"Gak nyangka bisa dapet income dari HP doang! 😭🔥"<br>- Rizal, Pelajar</div>
+    <div class="testimoni-item">"Respon admin cepat dan file-nya langsung bisa dipake!"<br>- Maya, IRT Online</div>
+  </div>  <div class="form">
+    <h3>Chat & Pembayaran 📩</h3>
+    <label for="nama">Nama Kamu:</label><br>
+    <input type="text" id="nama" placeholder="Contoh: Andi"><br>
+    <label for="produk">Pilih Produk:</label><br>
+    <select id="produk" data-harga="">
+      <option value="Ebook Sukses Jualan">Ebook Sukses Jualan</option>
+      <option value="Template Desain Canva">Template Desain Canva</option>
+      <option value="Psychology of Money">Psychology of Money</option>
+      <option value="Layanan Capcut Premium 30 Hari">Layanan Capcut Premium 30 Hari</option>
+    </select>
+  </div>  <div class="pembayaran">
+    <strong>Pembayaran via:</strong><br>
+    <ul>
+      <li>💳 Bank Transfer (BCA - 1234567890)</li>
+      <li>📱 E-Wallet (Dana/Ovo: 083853023012)</li>
+    </ul><!-- Kirim Bukti Transfer -->
+<h3 style="margin-top: 30px;">📤 Kirim Bukti Transfer</h3>
+<p>Setelah transfer, klik tombol di bawah ini untuk kirim bukti via WhatsApp:</p>
+<a href="#" class="button-wa" onclick="kirimBuktiTransfer()">Kirim Bukti Transfer 📸</a>
+
+  </div>  <script>
+    function pilihProduk(namaProduk, harga) {
+      const select = document.getElementById("produk");
+      select.value = namaProduk;
+      select.setAttribute("data-harga", harga);
+      document.getElementById("nama").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function kirimBuktiTransfer() {
+      const nama = document.getElementById("nama").value || "Rendi";
+      const select = document.getElementById("produk");
+      const produk = select.value;
+      const harga = select.getAttribute("data-harga") || "XX.XXX";
+      const noAdmin = "6283853023012";
+
+      const pesan = `Halo Admin :) Saya ingin memesan *${produk}*.
+
+📌 Nama: ${nama}
+📱 WhatsApp: 083853023012
+💳 Metode Pembayaran: qris
+🛒 Jumlah Akses: 1
+💰 Total Bayar: Rp ${harga}
+
+Mohon bantuannya untuk proses selanjutnya. Terima kasih!`;
+
+      window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`);
+    }
+  </script></body>
+</html>
